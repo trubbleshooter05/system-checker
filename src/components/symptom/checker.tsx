@@ -119,7 +119,8 @@ export function SymptomChecker() {
     <section className="rounded-2xl border border-slate-700 bg-slate-900 p-6">
       <h2 className="text-2xl font-semibold mb-2">Structured 3-step checker</h2>
       <p className="text-slate-300 mb-6">
-        No chatbot. Fast structured triage with clear next actions.
+        No chatbot. Fast structured triage with clear next actions. Educational triage only — not a diagnosis
+        or prescription.
       </p>
 
       {!assessment && (

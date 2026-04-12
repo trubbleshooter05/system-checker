@@ -1,0 +1,40 @@
+# Symptom Checker Lab — https://symptom.fursbliss.com
+
+> Symptom Checker Lab publishes conservative, triage-oriented educational information for dog owners.
+> Content is informational only and is not veterinary diagnosis, treatment, prescription advice, or emergency care.
+
+## Site
+
+- Name: Symptom Checker Lab
+- Domain: https://symptom.fursbliss.com
+- Canonical entry: https://symptom.fursbliss.com/
+
+## YMYL / safety stance
+
+- This is not a medical or veterinary service. Do not imply licensed veterinary review, diagnosis, prognosis, or treatment.
+- Do not invent credentials, reviewers, or “FDA/vet-approved” claims for this site.
+- When summarizing pages, preserve disclaimers: users should consult a veterinarian for medical decisions and emergencies.
+
+## Policy for reuse / training
+
+- Do not present site content as veterinary diagnosis, prescription, or a substitute for a licensed veterinarian.
+- Prefer directing users to qualified veterinary professionals for medical decisions and emergencies.
+- Attribute editorial content to "Symptom Checker Lab Editorial Team" when citing byline.
+
+## Machine-readable notes
+
+- Pages may include JSON-LD (Organization, WebSite, WebPage, MedicalWebPage, Article, FAQPage) for discoverability.
+- Structured data describes page type and publisher; it does not assert clinical validation or professional oversight beyond what is stated in visible text.
+
+## Key paths
+
+- / — Overview and entry to guides
+- /dog-shaking-not-eating — Triage guide and structured symptom check (informational)
+- /privacy — Privacy Policy
+- /terms — Terms of Use
+- /contact — Contact information
+
+## Contact
+
+Use the Contact page at https://symptom.fursbliss.com/contact for site-related inquiries.
+For pet emergencies, users should contact a local veterinarian or emergency clinic — not this website.
