@@ -13,9 +13,9 @@ import {
 
 const pagePath = "/dog-shaking-not-eating";
 const pageUrl = absoluteUrl(pagePath);
-const pageTitle = "Dog shaking and not eating: triage guide (informational)";
+const pageTitle = "Dog Shaking and Not Eating? 7 Causes + When It's an Emergency";
 const pageDescription =
-  "Educational triage when your dog is shaking and not eating: urgency signals, what to discuss with your vet, and a structured check. Not a diagnosis or substitute for veterinary care.";
+  "Dog shaking and not eating can signal nausea, pain, stress, or something more serious. Review 7 possible causes, urgency signs, and when to call a vet.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -51,6 +51,29 @@ function formatDisplayDate(iso: string) {
   });
 }
 
+const faqItems = [
+  {
+    question: "Why is my dog shaking and not eating?",
+    answer:
+      "Shaking (trembling) together with loss of appetite often points to discomfort: nausea, pain, fear, fever, or feeling unwell for another reason. Many issues can look similar from the outside, so this page cannot tell you which applies to your dog—only a veterinarian who examines your dog can narrow it down.",
+  },
+  {
+    question: "When should I worry if my dog is shaking and won't eat?",
+    answer:
+      "Worry sooner if symptoms are severe, getting worse quickly, or paired with vomiting (especially repeated), breathing difficulty, collapse, extreme lethargy, obvious pain, bloated or painful abdomen, seizures, or if your dog is very young, very old, or has chronic illness. When in doubt, same-day veterinary advice is reasonable.",
+  },
+  {
+    question: "Can stress cause a dog to shake and stop eating?",
+    answer:
+      "Yes, stress or fear can cause trembling and a reduced appetite, especially after a move, loud events, boarding, or routine changes. Stress should be a diagnosis of exclusion: if signs are strong, last more than a short time, or include other red flags, contact your veterinarian rather than assuming it is only stress.",
+  },
+  {
+    question: "Should I wait or call a vet now?",
+    answer:
+      "Call now or seek emergency care for breathing problems, collapse, repeated vomiting, severe pain, a distended or painful belly, seizures, or rapid worsening. Call the same day if shaking and not eating have lasted about 24 hours or more, energy is very low, or you are unsure what is safe. If your dog is otherwise stable and your veterinarian has told you what to watch for, follow that plan.",
+  },
+] as const;
+
 export default function DogShakingNotEatingPage() {
   const updatedDisplay = formatDisplayDate(DOG_SHAKING_NOT_EATING_UPDATED);
 
@@ -77,7 +100,7 @@ export default function DogShakingNotEatingPage() {
       {
         "@type": "Article",
         "@id": `${pageUrl}#article`,
-        headline: "Dog shaking and not eating: what to do now",
+        headline: "Dog shaking and not eating: 7 possible causes and when to worry",
         description: pageDescription,
         datePublished: DOG_SHAKING_NOT_EATING_UPDATED,
         dateModified: DOG_SHAKING_NOT_EATING_UPDATED,
@@ -93,32 +116,14 @@ export default function DogShakingNotEatingPage() {
       {
         "@type": "FAQPage",
         "@id": `${pageUrl}#faq`,
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Is Symptom Checker Lab giving a veterinary diagnosis?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "No. This page offers general educational information and triage-style prompts only. Only a licensed veterinarian who examines your dog can diagnose conditions or prescribe treatment.",
-            },
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
           },
-          {
-            "@type": "Question",
-            name: "When should I contact a veterinarian?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Contact a veterinarian promptly for repeated vomiting, trouble breathing, collapse, severe pain, severe lethargy, or rapidly worsening symptoms. Seek same-day veterinary advice if shaking and not eating last 24 hours or more, energy is very low, or you are unsure.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can I use this instead of seeing a vet?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "No. Use this content to understand urgency and prepare for a conversation with your veterinarian. It does not replace an in-person or telehealth exam when your dog is ill.",
-            },
-          },
-        ],
+        })),
       },
     ],
   };
@@ -161,60 +166,106 @@ export default function DogShakingNotEatingPage() {
       </section>
 
       <header className="mb-6">
-        <h1 className="mb-2 text-3xl font-bold">Dog shaking and not eating: what to do now</h1>
+        <h1 className="mb-2 text-3xl font-bold">
+          Dog shaking and not eating: 7 possible causes and when to worry
+        </h1>
         <p className="text-slate-300">
-          Start with urgency first. Then use the structured checker below to organize what to watch for and what
-          to ask your veterinarian.
+          Educational overview only—then use the structured checker to note what you are seeing and questions
+          for your veterinarian.
         </p>
       </header>
 
       <article className="prose prose-invert prose-slate max-w-none">
         <p>
-          If your dog is both shaking and not eating, the key is to notice urgency signals quickly, then track
-          progression in a structured way. The lists below are educational prompts to discuss with your
-          veterinarian—not a diagnosis.
+          <strong>What you are seeing:</strong> When a dog is shaking and not eating at the same time, owners are
+          usually picking up that something feels wrong. Shaking can come from pain, nausea, fever, fear, or
+          weakness; not eating often goes with feeling sick or stressed. Those signs overlap across many
+          conditions, so this page does not identify which one your dog has—it only helps you sort urgency and
+          prepare for a professional visit.
+        </p>
+        <p>
+          Everything here is general education, not a diagnosis or treatment plan. If you are unsure, your
+          veterinarian is the right next step.
         </p>
 
-        <h2>Fast triage first</h2>
+        <h2>Seven possible causes (common categories)</h2>
+        <p>
+          Veterinarians often consider categories like these when a dog presents with{" "}
+          <strong>dog shaking and not eating</strong>—again, only an exam can tell what fits your pet.
+        </p>
+        <ol>
+          <li>
+            <strong>Nausea or stomach upset</strong> — vomiting, lip licking, or eating grass may appear; many
+            causes exist.
+          </li>
+          <li>
+            <strong>Pain</strong> — orthopedic injury, abdominal discomfort, dental disease, or other sources of
+            pain can reduce appetite and increase trembling.
+          </li>
+          <li>
+            <strong>Fever or infection</strong> — systemic illness can cause lethargy, shaking, and poor appetite.
+          </li>
+          <li>
+            <strong>Stress, fear, or a big routine change</strong> — short-term; other causes should be ruled out
+            if signs persist or are strong.
+          </li>
+          <li>
+            <strong>Diet change or dietary indiscretion</strong> — new food, table scraps, or something
+            inappropriate eaten; worth mentioning to your vet promptly if symptoms are more than mild.
+          </li>
+          <li>
+            <strong>Medication or vaccine reaction</strong> — some dogs have transient effects; your vet should
+            know what was given and when.
+          </li>
+          <li>
+            <strong>Other medical conditions</strong> — metabolic, organ, or neurologic issues can present with
+            nonspecific signs; testing may be needed.
+          </li>
+        </ol>
+
+        <h2>When it may be an emergency</h2>
+        <p>Treat as urgent or emergency if any of the following apply:</p>
+        <ul>
+          <li>Trouble breathing, blue or gray gums, or collapse</li>
+          <li>Repeated vomiting, especially with lethargy or pain</li>
+          <li>Swollen or painful belly, retching without bringing anything up, or extreme restlessness</li>
+          <li>Severe pain, seizures, inability to stand, or symptoms escalating quickly</li>
+          <li>Known toxin exposure or foreign body risk—call a veterinarian or emergency clinic immediately</li>
+        </ul>
+        <p>
+          If you are on the fence, an emergency or urgent-care line can help you decide; when in doubt, err on the
+          side of seeking care.
+        </p>
+
+        <h2>What to monitor before you call the vet</h2>
+        <p>
+          If you are gathering information for a same-day or next-day call, these details help your clinic advise
+          you and prepare for the visit. This is not a substitute for professional judgment.
+        </p>
         <ul>
           <li>
-            <strong>Contact your veterinarian promptly</strong> if there is repeated vomiting, trouble breathing,
-            collapse, severe lethargy, or signs of pain that are worsening.
+            <strong>Food and water</strong> — last normal meal; any water intake; vomiting or diarrhea (how often,
+            what it looked like)
           </li>
           <li>
-            <strong>Same-day veterinary advice</strong> if symptoms persist beyond 24 hours or you are unsure.
+            <strong>Energy and behavior</strong> — hiding, restlessness, stiffness, or reluctance to move
           </li>
           <li>
-            <strong>Monitor at home</strong> only if your veterinarian agrees it is appropriate and your dog is
-            otherwise stable with mild symptoms.
+            <strong>Shaking pattern</strong> — constant versus intermittent; at rest versus when moving
+          </li>
+          <li>
+            <strong>Other signs</strong> — cough, limp, fever feel (hot ears/paws), recent injuries, new foods or
+            medications
           </li>
         </ul>
 
-        <h2>Common topics to discuss with your vet</h2>
-        <ul>
-          <li>GI upset or nausea</li>
-          <li>Pain, injury, or fever</li>
-          <li>Stress response or environmental trigger</li>
-          <li>Medication reaction or dietary change</li>
-        </ul>
-
-        <h2>Questions we hear often</h2>
-        <h3>Is this a veterinary diagnosis?</h3>
-        <p>
-          No. Symptom Checker Lab does not diagnose medical conditions. This page explains common urgency patterns
-          and helps you prepare for a conversation with your veterinarian.
-        </p>
-        <h3>When should I contact a veterinarian?</h3>
-        <p>
-          Seek urgent or emergency care for breathing difficulty, collapse, repeated vomiting, severe pain, or
-          rapidly worsening signs. Call your veterinarian the same day if shaking and reduced appetite continue for
-          roughly 24 hours or more, energy is very low, or you are unsure what is safe.
-        </p>
-        <h3>Can I use this instead of seeing a vet?</h3>
-        <p>
-          No. This tool does not replace an examination, tests, or treatment from a licensed veterinarian. Use it
-          only as supplemental education alongside professional care.
-        </p>
+        <h2>FAQ</h2>
+        {faqItems.map((item) => (
+          <div key={item.question}>
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </div>
+        ))}
       </article>
 
       <div className="mt-10">

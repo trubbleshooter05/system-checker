@@ -78,19 +78,17 @@ export default function Home() {
       <p className="mb-4 text-slate-300">
         Standalone educational pages and a structured, three-step symptom check for dog owners. Content is
         triage-oriented: it helps you notice urgency and prepare questions for your veterinarian—it does not
-        diagnose, predict outcomes, or replace an exam.
+        diagnose, predict outcomes, or replace an exam. If you are seeing{" "}
+        <a className="font-medium text-cyan-400 underline underline-offset-2 hover:text-cyan-300" href="/dog-shaking-not-eating">
+          dog shaking and not eating
+        </a>
+        , we have a dedicated guide with urgency cues and a structured check.
       </p>
       <p className="mb-6 rounded-lg border border-slate-700 bg-slate-900/80 p-4 text-sm text-slate-400">
         <strong className="text-slate-200">Important:</strong> This site provides general information only.
         It is not a substitute for professional veterinary diagnosis, treatment, prescription decisions, or
         emergency care.
       </p>
-      <a
-        href="/dog-shaking-not-eating"
-        className="inline-block rounded-lg bg-cyan-500 px-4 py-2 font-semibold text-slate-900"
-      >
-        Dog shaking and not eating — guide & check
-      </a>
     </main>
   );
 }
