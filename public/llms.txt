@@ -28,8 +28,11 @@
 
 ## Key paths
 
-- / — Overview and entry to guides
-- /dog-shaking-not-eating — Triage guide and structured symptom check (informational)
+- / — Dog emergency symptom hub entry (“should I take my dog to the vet right now?”)
+- /symptoms — Browse urgent symptom guides
+- /check — Fast symptom checker (emergency / vet soon / monitor)
+- /symptoms/* — Individual symptom landing pages (vomiting, choking, chocolate, breathing, etc.)
+- /dog-shaking-not-eating — Combined shaking + appetite guide with structured check (informational)
 - /privacy — Privacy Policy
 - /terms — Terms of Use
 - /contact — Contact information

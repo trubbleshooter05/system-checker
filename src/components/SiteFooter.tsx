@@ -13,7 +13,13 @@ export function SiteFooter() {
             treatment.
           </p>
         </div>
-        <nav aria-label="Legal and contact" className="flex flex-col gap-2 sm:text-right">
+        <nav aria-label="Site" className="flex flex-col gap-2 sm:text-right">
+          <Link href="/symptoms" className="text-cyan-400 hover:underline">
+            Emergency symptoms
+          </Link>
+          <Link href="/check" className="text-cyan-400 hover:underline">
+            Check symptoms
+          </Link>
           <Link href="/privacy" className="text-cyan-400 hover:underline">
             Privacy Policy
           </Link>

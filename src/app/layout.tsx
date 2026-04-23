@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { JsonLd } from "@/components/JsonLd";
+import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -15,7 +16,7 @@ const organizationSchema = {
       name: SITE_NAME,
       url: SITE_URL,
       description:
-        "Symptom Checker Lab publishes conservative, triage-oriented educational information for dog owners. Content is informational only; it is not veterinary diagnosis, treatment, prescription advice, or a substitute for a licensed veterinarian or emergency services.",
+        "Symptom Checker Lab helps dog owners triage urgent questions like vomiting, breathing trouble, and suspected poisoning. Educational only—not veterinary diagnosis, treatment, or emergency care.",
       contactPoint: [
         {
           "@type": "ContactPoint",
@@ -39,11 +40,11 @@ const organizationSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — dog health triage guides & structured checks (informational only)`,
+    default: `${SITE_NAME} — dog emergency symptom triage (informational only)`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Symptom Checker Lab offers conservative, triage-oriented educational guides and a structured symptom check for dog owners. Informational only: not veterinary diagnosis, treatment, or emergency advice—always consult a veterinarian for medical decisions.",
+    "Quick, symptom-first help for dog emergencies: when to call the vet, what to watch for, and a fast checker. Informational only—not a substitute for a veterinarian or ER.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -74,6 +75,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <JsonLd data={organizationSchema} />
+        <SiteHeader />
         {children}
         <SiteFooter />
       </body>

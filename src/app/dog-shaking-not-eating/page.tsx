@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { JsonLd } from "@/components/JsonLd";
 import { MedicalDisclaimerBanner } from "@/components/MedicalDisclaimerBanner";
@@ -133,6 +134,18 @@ export default function DogShakingNotEatingPage() {
       <JsonLd data={structuredData} />
 
       <MedicalDisclaimerBanner />
+
+      <p className="mb-4 text-sm text-slate-400">
+        Looking for other urgent topics?{" "}
+        <Link href="/symptoms" className="font-semibold text-cyan-400 hover:underline">
+          Browse emergency symptoms
+        </Link>{" "}
+        or{" "}
+        <Link href="/check" className="font-semibold text-cyan-400 hover:underline">
+          run the fast symptom checker
+        </Link>
+        .
+      </p>
 
       <p className="mb-4 text-xs font-medium uppercase tracking-wide text-slate-500">
         Updated {updatedDisplay} · {EDITORIAL_ATTRIBUTION}

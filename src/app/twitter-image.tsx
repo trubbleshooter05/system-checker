@@ -29,7 +29,7 @@ export default function TwitterImage() {
       >
         <div style={{ fontSize: 56, fontWeight: 700, letterSpacing: -1 }}>{SITE_NAME}</div>
         <div style={{ marginTop: 20, fontSize: 28, maxWidth: 900, lineHeight: 1.35, color: "#94a3b8" }}>
-          Conservative, triage-oriented education for dog owners — not veterinary diagnosis or treatment.
+          Dog emergency symptom triage — not veterinary diagnosis, treatment, or ER care.
         </div>
         <div style={{ marginTop: 36, fontSize: 22, color: "#22d3ee" }}>symptom.fursbliss.com</div>
       </div>
